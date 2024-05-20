@@ -1,7 +1,7 @@
 # cse185-project
 CSE 185 Final Project: Peak Calling Implementation for Mouse Liver ChIP-seq
 
-### Members:
+## Members:
 - Jiyeon Song
 - Ivana Roque
 - Jacob Ketchum
@@ -12,3 +12,9 @@ We plan to use the peak calling algorithm findPeaks from Homer used in Lab 5 to 
 
 For the dataset that we chose, the researchers focused on mouse liver ChIP-seq and they provided the information of histone modification. They used two antibodies(H3K9me3 and H3K27ac) to perform the chIP-sequencing, along with a control where no antibody was used in order to examine the whole cell lysate. The mice models were in two different treatment setting, one is Regular chow diet (NC) and Methionine and choline deficient diet(MCD)
 Link: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA1105657&o=acc_s%3Aa
+
+- title/description:
+- installation instructions:
+- basic usage instructions:
+- complete usage instructions:
+- credits:
