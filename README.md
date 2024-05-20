@@ -1,4 +1,4 @@
-# cse185-project
+# CSE185-project
 CSE 185 Final Project: Peak Calling Implementation for Mouse Liver ChIP-seq
 
 ## Title/description: PEAK-A-VIEW
