@@ -10,7 +10,8 @@ A peak calling tool to compete with findPeaks
 - Jacob Ketchum: dketchum@ucsd.edu
 
 ## Installation Instructions:
-TBD
+Installation requires ... and ... libraries to be installed. You can install these with pip:
+``pip install ... ...``
 
 ## Basic usage instructions:
 A peak calling tool using Python script and visualization methods. Compare with the peak calling algorithm findPeaks
