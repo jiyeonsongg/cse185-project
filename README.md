@@ -10,15 +10,15 @@ A peak calling tool to compete with findPeaks
 - Jacob Ketchum: dketchum@ucsd.edu
 
 ## Installation Instructions:
-Installation requires AAA and BBB libraries to be installed. You can install these with pip:
-``pip install AAA BBB``
+Installation requires AAA and BBB libraries to be installed. You can install these with pip:\
+``pip install AAA BBB``\
 
-Once the required libraries are installed, you can install ``TOOL_NAME.py`` with the following command:
-``python setup.py install``
+Once the required libraries are installed, you can install ``TOOL_NAME.py`` with the following command:\
+``python setup.py install``\
 
-Note: if you do not have root access, you can run the commands above with additional options to install locally:
+Note: if you do not have root access, you can run the commands above with additional options to install locally:\
 ``pip install --user AAA BBB
-python setup.py -- install --user``
+python setup.py -- install --user``\
 
 If the install was successful, typing ``TOOL_NAME --help`` should show a useful message.
 
