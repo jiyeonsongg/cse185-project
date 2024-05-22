@@ -6,3 +6,6 @@ scikit-learn
 notebook
 pyfaidx
 pysam
+samtools
+bedtools
+macs2
