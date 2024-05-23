@@ -10,11 +10,14 @@ A peak calling tool to compete with findPeaks
 - Jacob Ketchum: dketchum@ucsd.edu
 
 ## Installation Instructions:
-Installation requires AAA and BBB libraries to be installed. You can install these with pip:\
+Installation requires AAA and BBB libraries to be installed. 
+INSTALL SAMTOOLS AND BAMTOOLS, sudo apt-get update, sudo apt-get install samtools
+You can install these with pip:\
 ``pip install AAA BBB``
 
 Once the required libraries are installed, you can install ``TOOL_NAME.py`` with the following command:\
 ``python setup.py install``
+I used pip install . (or pip install peak_a_view)
 
 Note: if you do not have root access, you can run the commands above with additional options to install locally:\
 ``pip install --user AAA BBB
