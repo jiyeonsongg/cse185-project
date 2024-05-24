@@ -1,11 +1,1 @@
-numpy
-pandas
-matplotlib
-scipy
-scikit-learn
-notebook
-pyfaidx
-pysam
-samtools
-bedtools
-macs2
+MACS2~=2.2.9.1
