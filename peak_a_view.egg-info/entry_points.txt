@@ -1,2 +1,0 @@
-[console_scripts]
-peak_a_view = peak_a_view.peak_a_view:main
