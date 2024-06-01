@@ -1,5 +1,6 @@
 import argparse
 import subprocess
+import os
 
 # ANSI escape sequences for text formatting
 RESET = "\033[0m"
@@ -35,9 +36,17 @@ def main():
     bam_file = args.bam
     output_file = args.out if args.out else "peaks.bed"
     window_size = args.window_size
-    
+
+    # Get the absolute path of the peak_a_view_tool.py script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    tool_path = os.path.join(script_dir, 'peak_a_view_tool.py')
+
+    # Print paths for debugging
+    print(f"Script directory: {script_dir}")
+    print(f"Tool path: {tool_path}")
+
     # Call the peak_a_view function from peak_a_view_tool.py
-    subprocess.run(['python3', 'peak_a_view/peak_a_view_tool.py', bam_file, '-o', output_file, '-w', str(window_size)])
+    subprocess.run(['python', tool_path, bam_file, '-o', output_file, '-w', str(window_size)], check=True)
 
 if __name__ == "__main__":
     main()
