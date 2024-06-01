@@ -39,7 +39,7 @@ def main():
 
     # Get the absolute path of the peak_a_view_tool.py script
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    tool_path = os.path.join(script_dir, 'peak_a_view', 'peak_a_view_tool.py')
+    tool_path = os.path.join(script_dir, 'peak_a_view_tool.py')
 
     # Print paths for debugging
     print(f"Script directory: {script_dir}")
