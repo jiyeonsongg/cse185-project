@@ -37,7 +37,7 @@ def main():
     window_size = args.window_size
     
     # Call the peak_a_view function from peak_a_view_tool.py
-    subprocess.run(['python3', 'peak_a_view_tool.py', bam_file, '-o', output_file, '-w', str(window_size)])
+    subprocess.run(['python3', 'peak_a_view/peak_a_view_tool.py', bam_file, '-o', output_file, '-w', str(window_size)])
 
 if __name__ == "__main__":
     main()
