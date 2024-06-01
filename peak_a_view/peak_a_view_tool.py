@@ -14,7 +14,7 @@ def count_overlaps(reads, windows):
     overlap_counts = {index: 0 for index in range(len(windows))}
     for i, window in windows.iterrows():
         for _, read in reads.iterrows():
-            if read['Chr'] == window[0] and not (read['end'] < window[1] or read['start'] > window[2]):
+            if read['chrom'] == window[0] and not (read['end'] < window[1] or read['start'] > window[2]):
                 overlap_counts[i] += 1
     return overlap_counts
 
@@ -22,7 +22,7 @@ def find_peaks(overlap_counts, threshold):
     peaks = [index for index, count in overlap_counts.items() if count >= threshold]
     return peaks
 
-def main(input_bam):
+def peak_a_view(input_bam, output_file=None, window_size=1000):
     # Step 1: Convert BAM to BED
     bed_file = "output.bed"
     bam_to_bed(input_bam, bed_file)
@@ -50,7 +50,7 @@ def main(input_bam):
     genome_file = "genome_file.txt"
     create_genome_file(input_bam, genome_file)
     windows_file = "genome_windows.bed"
-    create_genome_windows(genome_file, windows_file)
+    create_genome_windows(genome_file, windows_file, window_size)
     
     # Load windows
     windows = pd.read_csv(windows_file, sep='\t', header=None, names=['chrom', 'start', 'end'])
@@ -65,13 +65,22 @@ def main(input_bam):
     peaks = find_peaks(overlap_counts, threshold)
     
     # Step 6: Export peaks to BED file
-    with open('peaks.bed', 'w') as file:
+    output_file = output_file if output_file else 'peaks.bed'
+    with open(output_file, 'w') as file:
         for peak in peaks:
             p = windows.loc[peak]
             file.write(f"{p['chrom']}\t{p['start']}\t{p['end']}\n")
     
-    print("Peak calling completed and results saved to peaks.bed.")
+    print(f"Peak calling completed and results saved to {output_file}.")
 
 # Example usage
 if __name__ == "__main__":
-    main("ENCFF609LFX.bam")
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Peak calling tool for ChIP-seq data.")
+    parser.add_argument("bam_file", type=str, help="Input BAM file.")
+    parser.add_argument("-o", "--output", type=str, help="Output BED file.", default="peaks.bed")
+    parser.add_argument("-w", "--window_size", type=int, help="Window size for peak calling.", default=1000)
+    args = parser.parse_args()
+
+    peak_a_view(args.bam_file, args.output, args.window_size)
