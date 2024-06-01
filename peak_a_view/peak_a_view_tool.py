@@ -88,7 +88,6 @@ def peak_a_view(input_bam, output_file=None, window_size=1000):
     output_file = output_file if output_file else 'peaks.bed'
     with open(output_file, 'w') as file:
         for i,peak in significant_peaks.iterrows():
-            peak = windows.loc[peak]
             file.write(f"{peak['chrom']}\t{peak['start']}\t{peak['end']}\n")
     
     print(f"Peak calling completed and results saved to {output_file}.")
