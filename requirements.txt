@@ -1,4 +1,3 @@
-notebook
-pyfaidx
+pandas
 pysam
 macs2
