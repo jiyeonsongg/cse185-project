@@ -31,7 +31,7 @@ def peak_a_view(input_bam, output_file=None, window_size=1000):
     # Load BED file
     test_bed = pd.read_csv(bed_file, sep='\t', names=['Chr', 'start', 'end', 'read_name', 'quality_score', 'strand'])
     # this BED file will contain the reads from the BAM file
-    test_bed = test_bed.iloc[:,:3]
+    test_bed = test_bed.iloc[:,:3] # only need chromosome number, start, end
     test_bed.to_csv('reads.bed', sep = '\t' ,index=False, header=None) # we will count overlaps of reads with the windows
     
     # Step 2: Combine chromosomes 1 to 12
@@ -61,9 +61,7 @@ def peak_a_view(input_bam, output_file=None, window_size=1000):
     windows = pd.read_csv(windows_file, sep='\t', header=None, names=['chrom', 'start', 'end'])
     
     # Step 4: Count overlaps in each window
-    # overlap_counts = count_overlaps(combined_df, windows)
     # use pybedtools to count overlaps instead (more efficient)
-    
     reads = pybedtools.BedTool('reads.bed')
     windows = pybedtools.BedTool('genome_windows.bed')
     
@@ -74,11 +72,6 @@ def peak_a_view(input_bam, output_file=None, window_size=1000):
     overlap_df = overlaps.to_dataframe(names=['chr', 'start', 'end', 'count'])
     
     # Step 5: Identify peaks
-    # mean_count = sum(overlap_counts.values()) / len(overlap_counts)
-    # std_dev = (sum((x - mean_count) ** 2 for x in overlap_counts.values()) / len(overlap_counts)) ** 0.5
-    # threshold = mean_count + 2 * std_dev  # Adjust threshold if needed
-    # peaks = find_peaks(overlap_counts, threshold)
-    
     # Calculate peaks using empirical rule (top 1%)
     counts = overlap_df['count']
     threshold = counts.quantile(0.99)  # Top 1% of the overlap counts
