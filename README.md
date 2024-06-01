@@ -33,40 +33,19 @@ A peak calling tool to compete with findPeaks.
     git clone https://github.com/jiyeonsongg/peak-a-view.git
     cd peak-a-view
     ```
-
-2. Create a virtual environment named `peak-a-view`:
-    ```sh
-    python -m venv peak-a-view
-    ```
-
-3. Activate the virtual environment:
-    - On Windows:
-      ```sh
-      .\peak-a-view\Scripts\activate
-      ```
-    - On macOS/Linux:
-      ```sh
-      source peak-a-view/bin/activate
-      ```
-
-4. Install the required libraries:
+2. Install the required libraries:
     ```sh
     pip install -r requirements.txt
     ```
 
-5. Install `peak_a_view.py`:
+3. Install `peak_a_view.py`:
     ```sh
     python setup.py install
     ```
 
-   Note: If you do not have root access, you can install locally:
+4. Verify the installation:
     ```sh
-    pip install --user -r requirements.txt
-    python setup.py install --user
-    ```
-
-6. Verify the installation:
-    ```sh
+    which peak_a_view  # or `where peak_a_view` on Windows
     peak_a_view --help
     ```
 
