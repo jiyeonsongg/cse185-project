@@ -41,7 +41,8 @@ def peak_a_view(input_bam, output_file=None, window_size=1000):
                 'start': chrom_df['start'].min(),
                 'end': chrom_df['end'].max()
             }
-            combined_df = combined_df.append(combined_row, ignore_index=True)
+            combined_row = pd.Series(combined_row)
+            combined_df = pd.concat([combined_df,pd.DataFrame([combined_row])], ignore_index=True)
     
     # Save the combined result to a new BED file
     combined_df.to_csv('combined_chroms.bed', sep='\t', header=False, index=False)
