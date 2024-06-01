@@ -1,4 +1,0 @@
-#!python
-
-from peakfind.peakfind import main
-main()
