@@ -1,4 +1,0 @@
-#!/usr/bin/env/python
-
-from peak_a_view.peak_a_view import main
-main()
