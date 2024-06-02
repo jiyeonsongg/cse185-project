@@ -47,7 +47,8 @@ def main():
     print(f"Tool path: {tool_path}")
 
     # Call the peak_a_view function from peak_a_view_tool.py
-    subprocess.run(['python', tool_path, bam_file, '-o', output_file, '-w', str(window_size)], check=True)
+  #  subprocess.run(['python', tool_path, bam_file, '-o', output_file, '-w', str(window_size)], check=True)
+    peak_a_view_tool.peak_a_view(bam_file, output_file, window_size)
 
 if __name__ == "__main__":
     main()
