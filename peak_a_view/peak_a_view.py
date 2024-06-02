@@ -1,6 +1,7 @@
 import argparse
 import subprocess
 import os
+from peak_a_view import peak_a_view_tool
 
 # ANSI escape sequences for text formatting
 RESET = "\033[0m"
