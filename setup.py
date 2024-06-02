@@ -10,7 +10,7 @@ setup(
     install_requires=[
         'pandas',
         'pysam',
-        'macs2',
+        'pybedtools',
     ],
     entry_points={
         'console_scripts': [
