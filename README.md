@@ -28,10 +28,9 @@ CSE 185 Final Project: Peak Calling Implementation for Mouse Liver ChIP-seq
     git clone https://github.com/jiyeonsongg/peak-a-view.git
     cd peak-a-view
     ```
-2. Set up the Conda Environment:
+2. Set up the requirements:
     ```sh
-    conda env create -f environment.yml
-    conda activate peak_a_view
+    pip requirements.txt install
     ```
 
 3. Install `peak_a_view.py`:
