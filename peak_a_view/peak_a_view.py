@@ -29,7 +29,7 @@ def main():
     )
 
     parser.add_argument("bam", help="Indexed BAM file", type=str)
-    parser.add_argument("-o", "--out", help="Write output to file. Default: stdout", metavar="FILE", type=str, required=False)
+    parser.add_argument("-o", "--out", help="Write output to file. Default: output_peaks", metavar="FILE", type=str, required=False)
     parser.add_argument("-w", "--window_size", help="Window size for peak calling. Default: 1000", metavar="WINDOW_SIZE", type=int, default=1000)
     
     args = parser.parse_args()
