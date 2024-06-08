@@ -14,7 +14,6 @@ CSE 185 Final Project: Peak Calling Implementation for Mouse Liver ChIP-seq
   - [Basic Usage Instructions](#basic-usage-instructions)
   - [Complete Usage Instructions](#complete-usage-instructions)
 - [Project Structure](#project-structure)
-- [Credits](#credits)
 
 ## Contributions
 - Jiyeon Song: [jis036@ucsd.edu](mailto:jis036@ucsd.edu)
@@ -63,3 +62,4 @@ A peak calling tool using a Python script and visualization methods. Compare wit
 TBD
 
 ## Project Structure
+
