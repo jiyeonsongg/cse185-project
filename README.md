@@ -51,7 +51,6 @@ CSE 185 Final Project: Peak Calling Implementation for Mouse Liver ChIP-seq
    peak_a_view small_ENCFF609LFX.bam -o output_peaks.bed -w 500
    # peak_a_view INPUT.bam -o OUTPUT.bed -w WINDOW_SIZE_NUMBER
    ```
-
    
 ## Usage
 
@@ -59,7 +58,8 @@ CSE 185 Final Project: Peak Calling Implementation for Mouse Liver ChIP-seq
 A peak calling tool using a Python script and visualization methods. Compare with the peak calling algorithm findPeaks.
 
 ### Complete Usage Instructions
-TBD
+Once we export the output_peaks.bed after running the command line, open IGV(Integrative Genomics Viewer) and upload the file to see peak calling visualization.
+<Recommendation: Download IGV Desktop version - https://igv.org/>
 
 ## Project Structure
 ```sh
