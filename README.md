@@ -62,6 +62,7 @@ A peak calling tool using a Python script and visualization methods. Compare wit
 TBD
 
 ## Project Structure
+```sh
 peak-a-view
 |
 |--analysis
@@ -75,3 +76,4 @@ peak-a-view
 |--environment.yml
 |--requirements.txt
 |--setup.py
+```
