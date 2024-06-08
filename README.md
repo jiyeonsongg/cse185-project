@@ -67,10 +67,10 @@ peak-a-view
 |
 |--analysis
 |--benchmark
-|--|--peak_a_view
-|     |  __init__.py
-|     |  peak_a_view.py
-|     |  peak_a_view_tool.py
+|--peak_a_view
+|  |  __init__.py
+|  |  peak_a_view.py
+|  |  peak_a_view_tool.py
 |--.gitignore
 |--README.md
 |--environment.yml
