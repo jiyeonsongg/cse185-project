@@ -71,8 +71,14 @@ peak-a-view
 |  |  __init__.py
 |  |  peak_a_view.py
 |  |  peak_a_view_tool.py
+|  |  test_peak_a_view.py
 |--.gitignore
 |--README.md
 |--requirements.txt
 |--setup.py
 ```
+
+## Testing
+To run unit tests: 
+- Ensure you are in peak-a-view/peak_a_view directory
+- Run: python test_peak_a_view.py
