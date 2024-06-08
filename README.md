@@ -1,10 +1,10 @@
-# CSE185-project
+# PEAK-A-VIEW ( •̀ ω •́ )✧
 
 ## Project Description
 CSE 185 Final Project: Peak Calling Implementation for Mouse Liver ChIP-seq
 
 ## Title/Description: PEAK-A-VIEW
-A peak calling tool to compete with findPeaks.
+```peak-a-view``` is designed to process ChIP-Seq data to identify peaks corresponding to key regions representing protein-DNA interactions.
 
 ## Table of Contents
 - [Contributions](#contributions)
@@ -23,19 +23,16 @@ A peak calling tool to compete with findPeaks.
 
 ## Installation
 
-### Prerequisites
-- Python 3.8
-- Required libraries: check the `requirements.txt`
-
 ### Setting Up the Environment
 1. Clone the repository:
     ```sh
     git clone https://github.com/jiyeonsongg/peak-a-view.git
     cd peak-a-view
     ```
-2. Install the required libraries:
+2. Set up the Conda Environment:
     ```sh
-    pip install -r requirements.txt
+    conda env create -f environment.yml
+    conda activate peak_a_view
     ```
 
 3. Install `peak_a_view.py`:
@@ -46,9 +43,17 @@ A peak calling tool to compete with findPeaks.
 4. Verify the installation:
     ```sh
     which peak_a_view  # or `where peak_a_view` on Windows
-    peak_a_view --help
     ```
+5. Get started!
+   ```sh
+   peak_a_view --help
+   ```
+   EXAMPLE:
+   ```sh
+   peak_a_view small_ENCFF609LFX.bam -o output_peaks.bed -w 500 # peak_a_view INPUT.bam -o OUTPUT.bed -w WINDOW_SIZE_NUMBER
+   ```
 
+   
 ## Usage
 
 ### Basic Usage Instructions
