@@ -30,7 +30,7 @@ CSE 185 Final Project: Peak Calling Implementation for Mouse Liver ChIP-seq
     ```
 2. Set up the requirements:
     ```sh
-    pip requirements.txt install
+    pip install -r requirements.txt
     ```
 
 3. Install `peak_a_view.py`:
