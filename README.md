@@ -72,6 +72,8 @@ peak-a-view
 |  |  peak_a_view.py
 |  |  peak_a_view_tool.py
 |  |  test_peak_a_view.py
+|--tests
+|  |  cmdline_tests.sh
 |--.gitignore
 |--README.md
 |--requirements.txt
@@ -82,3 +84,8 @@ peak-a-view
 To run unit tests: 
 - Ensure you are in peak-a-view/peak_a_view directory
 - Run: python test_peak_a_view.py
+
+To run command line tests: 
+- Run `chmod  +x cmdline_tests.sh` from inside the peak-a-view/tests directory
+- Ensure you are in peak-a-view/tests directory
+- Run command `./cmdline_tests.sh`
