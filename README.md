@@ -62,4 +62,16 @@ A peak calling tool using a Python script and visualization methods. Compare wit
 TBD
 
 ## Project Structure
-
+peak-a-view
+|
+|--analysis
+|--benchmark
+|--|--peak_a_view
+|     |  __init__.py
+|     |  peak_a_view.py
+|     |  peak_a_view_tool.py
+|--.gitignore
+|--README.md
+|--environment.yml
+|--requirements.txt
+|--setup.py
