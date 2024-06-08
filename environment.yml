@@ -1,0 +1,13 @@
+name: peak_a_view
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.9
+  - pandas
+  - pysam
+  - pybedtools
+  - pip
+  - pip:
+      - macs2
