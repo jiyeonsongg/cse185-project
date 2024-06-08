@@ -48,7 +48,8 @@ CSE 185 Final Project: Peak Calling Implementation for Mouse Liver ChIP-seq
    ```
    EXAMPLE:
    ```sh
-   peak_a_view small_ENCFF609LFX.bam -o output_peaks.bed -w 500 # peak_a_view INPUT.bam -o OUTPUT.bed -w WINDOW_SIZE_NUMBER
+   peak_a_view small_ENCFF609LFX.bam -o output_peaks.bed -w 500
+   # peak_a_view INPUT.bam -o OUTPUT.bed -w WINDOW_SIZE_NUMBER
    ```
 
    
@@ -72,7 +73,6 @@ peak-a-view
 |  |  peak_a_view_tool.py
 |--.gitignore
 |--README.md
-|--environment.yml
 |--requirements.txt
 |--setup.py
 ```
